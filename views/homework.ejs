@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Henry's Profile</title>
-	<link rel=stylesheet type="text/css" href="/css_style.css">
-
+	<link rel=stylesheet type="text/css" href="./css/css_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 		<header>
 
 			<div class="header_logo">
-				<img src="/pic/logo.png" alt="Photo Of Me" title="Me" height="100px" width="100px" >
+				<img src="./img/logo.png" alt="Photo Of Me" title="Me" height="100px" width="100px" >
 			</div>
 
 			<div class="header_info">
@@ -23,12 +23,10 @@
 			</div>
 
 			<div class="nav">
-				<ul>
-						<li class="menu"><a class="amenu" href="index.html" style="text-decoration:none;"> Home </a></li>
-						<li class="menu"><a class="amenu" href="about.html" style="text-decoration:none;">About</a></li>
-			    	 	<li class="menu sel"><a class="amenu sel" href="homework.html" style="text-decoration:none;">HomeWork</a></li>
-				</ul>
-				
+				<% include header.ejs %>
+				<script>
+					$("li.menu_homework a").removeClass("amenu").addClass("amenu sel");
+				</script>
 			</div>
 
 			<div class="footer">
@@ -43,23 +41,23 @@
 
 				<ul class="homework_list">
 					<li class="homework_list">
-						<a href="page/hw1/hw1-0416208-黃士軒.html" title="MyHomePage"> 
-						<img src="pic/hw1.png" alt="MyHomePage"></a>
-						<a href="page/hw1/hw1-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW1.MyHomePage</a>
+						<a href="./page/hw1/hw1-0416208-黃士軒.html" title="MyHomePage"> 
+						<img src="./img/hw1.png" alt="MyHomePage"></a>
+						<a href="./page/hw1/hw1-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW1.MyHomePage</a>
 						<p class="homework_list_spec">使用CSS進行排版</p>
 					</li>
 
 					<li class="homework_list">
-						<a href="hw1-0416208-黃士軒.html" title="MyHomePage2"> 
-						<img src="pic/hw1s.png" alt="MyHomePage2"></a>
-						<a href="hw1-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW1.MyHomePage V2</a>
+						<a href="./hw1-0416208-黃士軒.html" title="MyHomePage2"> 
+						<img src="./img/hw1s.png" alt="MyHomePage2"></a>
+						<a href="./hw1-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW1.MyHomePage V2</a>
 						<p class="homework_list_spec">重新排版 加入RWD設計(行動版尚未完成)</p>
 					</li>
 
 					<li class="homework_list">
-						<a href="page/hw2/hw2-0416208-黃士軒.html" title="ReadMyMind"> 
-						<img src="pic/hw2.png" alt="ReadMyMind"></a>
-						<a href="page/hw2/hw2-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW2.ReadMyMind</a>
+						<a href="./page/hw2/hw2-0416208-黃士軒.html" title="ReadMyMind"> 
+						<img src="./img/hw2.png" alt="ReadMyMind"></a>
+						<a href="./page/hw2/hw2-0416208-黃士軒.html" tabindex="-1" class="homework_list_title">HW2.ReadMyMind</a>
 						<p class="homework_list_spec">使用JavaScript進行排版 互動</p>
 					</li>
 				</ul>

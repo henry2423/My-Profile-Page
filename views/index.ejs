@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Henry's Profile</title>
-	<link rel=stylesheet type="text/css" href="/css/css_style.css">
-
+	<link rel=stylesheet type="text/css" href="./css/css_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 		<header>
 
 			<div class="header_logo">
-				<img src="/img/logo.png" alt="Photo Of Me" title="Me" height="100px" width="100px" >
+				<img src="./img/logo.png" alt="Photo Of Me" title="Me" height="100px" width="100px" >
 			</div>
 
 			<div class="header_info">
@@ -23,12 +23,10 @@
 			</div>
 
 			<div class="nav">
-				<ul>
-						<li class="menu sel"><a class="amenu sel" href="index.html" style="text-decoration:none;"> Home </a></li>
-						<li class="menu"><a class="amenu" href="about.html" style="text-decoration:none;">About</a></li>
-			    	 	<li class="menu"><a class="amenu" href="homework.html" style="text-decoration:none;">HomeWork</a></li>
-				</ul>
-				
+				<% include header.ejs %>
+				<script>
+					$("li.menu_index a").removeClass("amenu").addClass("amenu sel");
+				</script>
 			</div>
 
 			<div class="footer">
